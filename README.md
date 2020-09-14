@@ -8,6 +8,5 @@ Integrantes del Grupo:
 
 -Oscar Andreé Mendoza Alejandro
 
--Jean Carlo Cornejo Corjeno
+-Jean Carlo Cornejo Cornejo
 
-Pito
