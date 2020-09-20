@@ -6,6 +6,12 @@ Integrantes del grupo:
 * Patrick Xavier Márquez Choque
 * Jean Carlo Cornejo Cornejo
 * Oscar Andree Mendoza
+
+## Tabla de Contenidos
+* [Introducción](#introducción)
+* [Líbrerías Necesarias](#librerías-necesarias)
+* [Resultados](#resultados)
+
 ## Introducción
 El código se desarolló en Python 3.7.4.
 Se implementaron 2 algoritmos de busqueda.
@@ -18,7 +24,7 @@ Se implementaron 2 algoritmos de busqueda.
   
 Se utilizó la libreria matplotlib 3.2.1 para dibujar los grafos y sus seguimiento. El código mostrará el siguiente menu al ser compilado:
 
-##  Librerias Necesarias
+##  Librerías Necesarias
 * networkx 2.5
 * matplotlib 3.2.1
 * random
@@ -27,7 +33,7 @@ Se utilizó la libreria matplotlib 3.2.1 para dibujar los grafos y sus seguimien
 * time
 * PriorityQueue
 
-##  Compilaciones
+##  Resultados
 Al compilar el proyecto se mostrará el siguiente menu
 ![Alt text](https://github.com/patrick03524/Inteligencia-Artificial/blob/master/Laboratorio%20Tema%20de%20B%C3%BAsquedas%201/Imgs/sc1.png)
 
