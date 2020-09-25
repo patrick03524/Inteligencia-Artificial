@@ -40,12 +40,20 @@ Esta ventana permite ingresar la *dificultad*. La Dificultad es la profundidad m
 
 Esta será el tablero del Juego de Damas, ahora puede iniciar el juego:
 
-*Para poder realizar algún movimiento es necesario primero hacer click tanto en alguna ficha que sea capaz de realizar un movimiento y posteriormente ahcer click en alguna casilla vacia donde a la cual se pueda realizar el movimiento, el juego analizará si este es un movimiento válido y posteriormente hará la actualización visual de la ficha moviendose hacia esa casilla.*
+El tablero será una matriz de casilla de 8x8 de 500px de tamaño y cada ficha que nosotros controlaremos serán de color azul mientas que las fichas controladas por la IA serán de color rojo.
+
+**Para poder realizar algún movimiento es necesario primero hacer click tanto en alguna ficha que sea capaz de realizar un movimiento y posteriormente ahcer click en alguna casilla vacia donde a la cual se pueda realizar el movimiento, el juego analizará si este es un movimiento válido y posteriormente hará la actualización visual de la ficha moviendose hacia esa casilla.**
 
 Por ejemplo empezaremos el juego de la siguiente manera:
 
 ![Alt text](https://github.com/patrick03524/Inteligencia-Artificial/blob/master/Laboratorio%20Juego%20de%20Damas%202/Imgs/primermovimiento.png)
 
+Nosotros realizaremos el primer movimiento, entonces moveremos la 3 ficha azul a la casilla superior derecha.
+
 ![Alt text](https://github.com/patrick03524/Inteligencia-Artificial/blob/master/Laboratorio%20Juego%20de%20Damas%202/Imgs/segundomovimiento.png)
 
+Al realizar este movimiento la IA del Juego de damas analizará todas las posibilidades para calcular el mejor movimiento de las fichas que estan disponibles para moverse, en este caso es su primer movimiento asi que las únicas fichas capaces de moverse son las fichas rojas.
+
 ![Alt text](https://github.com/patrick03524/Inteligencia-Artificial/blob/master/Laboratorio%20Juego%20de%20Damas%202/Imgs/tercermovimiento.png)
+
+Asi es como la IA del juego va a realizar los movimientos y escocjerá entre ellos la mejor opción. El juego acaba mostrando una pantalla de Game Over cuando algun jugador se queda sin fichas (Con las Mismas Reglas que el juego tradicional).
