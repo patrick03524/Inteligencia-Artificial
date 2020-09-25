@@ -85,7 +85,7 @@ def getFullMove(partial_move):
     moves = findJumps(tablero, False) + findMoves(tablero, False)
     for move in moves:
         if move.ficha.id == partial_move.ficha.id and move.pieza.x == partial_move.pieza.x \
-                and move.pieza.y == partial_move.pieza.y:
+           and move.pieza.y == partial_move.pieza.y:
             return move
     return None
 
@@ -157,27 +157,25 @@ class Move():
         new_y = self.pieza.y / 62.5
         tablero[int(ficha_x), int(ficha_y)].ficha = None
         tablero[int(new_x), int(new_y)].ficha = deepcopy(self.ficha)
-        tablero[int(new_x), int(new_y)].ficha.x = tablero[int(
-            new_x), int(new_y)].x / 62.5
-        tablero[int(new_x), int(new_y)].ficha.y = tablero[int(
-            new_x), int(new_y)].y / 62.5
+        tablero[int(new_x), int(new_y)].ficha.x = tablero[int(new_x), int(new_y)].x / 62.5
+        tablero[int(new_x), int(new_y)].ficha.y = tablero[int(new_x), int(new_y)].y / 62.5
         for pieza in self.jumped:
             tablero[int(pieza.x / 62.5), int(pieza.y / 62.5)].ficha = None
         return tablero
     
-def findNeighbor(tablero, x, y, up=False, down=False):
-    neighbors = []
+def findVecino(tablero, x, y, up=False, down=False):
+    vecinos = []
     if not up:
         if x != 7 and y != 7:
-            neighbors.append(tablero[int(x + 1), int(y + 1)])
+            vecinos.append(tablero[int(x + 1), int(y + 1)])
         if x != 0 and y != 7:
-            neighbors.append(tablero[int(x - 1), int(y + 1)])
+            vecinos.append(tablero[int(x - 1), int(y + 1)])
     if not down:
         if x != 7 and y != 0:
-            neighbors.append(tablero[int(x + 1), int(y - 1)])
+            vecinos.append(tablero[int(x + 1), int(y - 1)])
         if x != 0 and y != 0:
-            neighbors.append(tablero[int(x - 1), int(y - 1)])
-    return neighbors
+            vecinos.append(tablero[int(x - 1), int(y - 1)])
+    return vecinos
 
 def checkNeighbor(x, y, px, py, up=False, down=False, dir=-1):
     results = []
@@ -221,11 +219,11 @@ def findMoves(tablero, color):
             continue
         options = []
         if pieza.ficha.corona:
-            piezas = findNeighbor(tablero, pieza.x / 62.5, pieza.y / 62.5)
+            piezas = findVecino(tablero, pieza.x / 62.5, pieza.y / 62.5)
         elif color:
-            piezas = findNeighbor(tablero, pieza.x / 62.5, pieza.y / 62.5, down=True)
+            piezas = findVecino(tablero, pieza.x / 62.5, pieza.y / 62.5, down=True)
         elif not color:
-            piezas = findNeighbor(tablero, pieza.x / 62.5, pieza.y / 62.5, up=True)
+            piezas = findVecino(tablero, pieza.x / 62.5, pieza.y / 62.5, up=True)
         for new_pieza in piezas:
             dirs = []
             if color is True or pieza.ficha.corona:
@@ -249,11 +247,11 @@ def findJumps(tablero, color, old=None, depth=0):
         options = []
         dirs = []
         if pieza.ficha.corona:
-            piezas = findNeighbor(tablero, pieza.x / 62.5, pieza.y / 62.5)
+            piezas = findVecino(tablero, pieza.x / 62.5, pieza.y / 62.5)
         elif color:
-            piezas = findNeighbor(tablero, pieza.x / 62.5, pieza.y / 62.5, down=True)
+            piezas = findVecino(tablero, pieza.x / 62.5, pieza.y / 62.5, down=True)
         elif not color:
-            piezas = findNeighbor(tablero, pieza.x / 62.5, pieza.y / 62.5, up=True)
+            piezas = findVecino(tablero, pieza.x / 62.5, pieza.y / 62.5, up=True)
         for new_pieza in piezas:
             dir = []
             if new_pieza.ficha is None or new_pieza.ficha.coronado == color:
@@ -531,9 +529,9 @@ def redraw():
 def runAI(color):
     t1 = time.time()
     ai_move = minimax(0, color, tablero, float("-inf"), float("inf"))
-    print(ai_move.weight)
+    #print(ai_move.weight)
     t2 = time.time()
-    print(t2-t1)
+    #print(t2-t1)
     matrix.tabla_hash = {}
     ai_move.apply(tablero)
     redraw()
@@ -576,6 +574,7 @@ def draw():
     drawtablero()
     drawfichas()
     while hasWon(tablero) == 0:
+        #runAI(True)
         sleep(0.01)
         King(tablero)
         playerTurn(False)
