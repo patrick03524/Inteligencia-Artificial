@@ -423,7 +423,6 @@ def minimax(depth, color, tablero, a, b):
     if depth == DIFFICULTY:
         moves = weightablero(tablero, depth)
         if color:
-            #Mejor movimiento para la IA
             coronado_moves = moves[1]
             mini = None
             for move in coronado_moves:
@@ -436,7 +435,6 @@ def minimax(depth, color, tablero, a, b):
                     break
             return mini
         else:
-            #Mejor movimiento para la Ti xd
             no_coronado_moves = moves[0]
             maxi = None
             for move in no_coronado_moves:
@@ -529,9 +527,7 @@ def redraw():
 def runAI(color):
     t1 = time.time()
     ai_move = minimax(0, color, tablero, float("-inf"), float("inf"))
-    #print(ai_move.weight)
     t2 = time.time()
-    #print(t2-t1)
     matrix.tabla_hash = {}
     ai_move.apply(tablero)
     redraw()
@@ -569,7 +565,27 @@ def playerTurn(color):
             redraw()
             return
 
+def drawmenu():
+    print("****MENU PRINCIPAL****")
+    print("""                                                                            
+     ____                              _____ _          _____               
+    |    \ ___ _____ ___ ___    ___   |_   _| |_ ___   |   __|___ _____ ___ 
+    |  |  | .'|     | .'|_ -|  |___|    | | |   | -_|  |  |  | .'|     | -_|
+    |____/|__,|_|_|_|__,|___|           |_| |_|_|___|  |_____|__,|_|_|_|___|
+
+    Bienvenido al Menu de Opciones
+    Universidad Católica San Pablo
+    Laboratorio de Inteligencia Artificial
+    ...
+    Se mostrará un menu emergente para ingresar la dificultad
+    esta dificultad se referirá al tamaño maximo del árbol de
+    posibilidades de la función minmax()
+    ...
+    
+    """)
+
 def draw():
+    drawmenu()
     chooseDif()
     drawtablero()
     drawfichas()
@@ -583,13 +599,16 @@ def draw():
         runAI(True)
     winWindow = graphics.GraphWin("Game over")
     if hasWon(tablero) == 1:
-        text = graphics.Text(Point(winWindow.width/2, winWindow.height/2), "You Won!!")
+        text = graphics.Text(Point(winWindow.width/2, winWindow.height/2), "Ganaste")
         text.draw(winWindow)
         sleep(3)
     elif hasWon(tablero) == -1:
-        text = graphics.Text(Point(winWindow.width / 2, winWindow.height / 2), "You Lost :(")
+        text = graphics.Text(Point(winWindow.width / 2, winWindow.height / 2), "Perdiste")
         text.draw(winWindow)
         sleep(3)
     return
 
-draw()
+def main():
+    draw()
+    
+main()
