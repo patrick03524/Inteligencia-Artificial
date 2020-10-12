@@ -13,7 +13,7 @@ Integrantes del grupo:
 * [Resultados](#resultados)
 
 ## Introducción
-El código se desarolló en C++(GNU C++ 11) en el archivo Algoritmo_Genetico_fun.cpp, los demás archivos corresponden a los archivos necesarios del proyecto que fue desarrollador en Visual Studio 2017.
+El código se desarolló en C++(GNU C++ 11) en el archivo [Algoritmo_Genetico_fun.cpp] , los demás archivos corresponden a los archivos necesarios del proyecto que fue desarrollador en Visual Studio 2017.
 
 Se realizo el código para Optimizar una función matemática usando algoritmos genéticos almacenar el valor de aptitud del mejor individuo y el promedio de la población en cada generación.
 
