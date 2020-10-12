@@ -1,0 +1,16 @@
+﻿  Algoritmo_Genetico_fun.cpp
+d:\san pablo\semestre 2020-2\inteligencia artificial\laboratorio tema de tsp con algoritmo genético 3\algoritmo_genetico_fun\algoritmo_genetico_fun\algoritmo_genetico_fun.cpp(40): warning C4244: 'return': conversión de 'double' a 'unsigned long'; posible pérdida de datos
+d:\san pablo\semestre 2020-2\inteligencia artificial\laboratorio tema de tsp con algoritmo genético 3\algoritmo_genetico_fun\algoritmo_genetico_fun\algoritmo_genetico_fun.cpp(43): warning C4244: 'return': conversión de 'double' a 'unsigned long'; posible pérdida de datos
+d:\san pablo\semestre 2020-2\inteligencia artificial\laboratorio tema de tsp con algoritmo genético 3\algoritmo_genetico_fun\algoritmo_genetico_fun\algoritmo_genetico_fun.cpp(55): warning C4244: '+=': conversión de 'const double' a 'int'; posible pérdida de datos
+d:\san pablo\semestre 2020-2\inteligencia artificial\laboratorio tema de tsp con algoritmo genético 3\algoritmo_genetico_fun\algoritmo_genetico_fun\algoritmo_genetico_fun.cpp(97): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+d:\san pablo\semestre 2020-2\inteligencia artificial\laboratorio tema de tsp con algoritmo genético 3\algoritmo_genetico_fun\algoritmo_genetico_fun\algoritmo_genetico_fun.cpp(121): warning C4244: 'argumento': conversión de 'unsigned long' a 'const _Ty'; posible pérdida de datos
+          with
+          [
+              _Ty=float
+          ]
+  Generando código
+  18 of 288 functions ( 6.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    8 functions had inline decision re-evaluated but remain unchanged
+  Generación de código finalizada
+  Algoritmo_Genetico_fun.vcxproj -> D:\San Pablo\Semestre 2020-2\Inteligencia Artificial\Laboratorio Tema de TSP con Algoritmo Genético 3\Algoritmo_Genetico_fun\Release\Algoritmo_Genetico_fun.exe
