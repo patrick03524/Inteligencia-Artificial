@@ -17,9 +17,13 @@ using namespace std;
 #define len 10
 #define l unsigned long
 
+int n_gen = 2;
 void seleccion(vector<string> &pob, vector<float>&fun, float media);
+void seleccion2(vector<string> &pob, vector<float>&fun, float media);
 vector<string> cruzamiento(vector<string> &pob);
+vector<string> cruzamiento2(vector<string> &pob);
 void mutacion(string &individuo1, string &individuo2);
+void mutacion2(string &individuo1, string &individuo2);
 
 l to_int(string n) {
 	int x = bitset<len>(n).to_ulong();
@@ -58,6 +62,36 @@ void seleccion(vector<string> &pob, vector<float>&fun, float media) {
 	vector<string> nueva_generacion = cruzamiento(padres);
 	pob = nueva_generacion;
 }
+void seleccion2(vector<string> &pob, vector<float>&fun, float media) {
+	int i = 0;
+	int j = 0;
+	vector<string> padres;
+	while (i < n_pob && j != n_pob) {
+		const double rep = static_cast<int>(fun[j] / media * 1.0 + 0.5) / 1.0;
+		for (int cont = 0; cont < rep; ++cont) {
+			padres.push_back(pob[j]);
+		}
+		i += rep;
+		j++;
+	}
+	vector<string> nueva_generacion = cruzamiento2(padres);
+	pob = nueva_generacion;
+	/*
+	l mejor_individuo = 0;
+	float promedio_individuo = 0;
+	for (int i = 0; i < nueva_generacion.size(); ++i) {
+		promedio_individuo += to_int(nueva_generacion[i]);
+		if (to_int(nueva_generacion[i]) > mejor_individuo) {
+			mejor_individuo = to_int(nueva_generacion[i]);
+		}
+	}
+	promedio_individuo /= n_pob;
+	cout << "Generacion " << n_gen << endl;
+	n_gen++;
+	cout << "MEJOR INDIVIDUO: " << mejor_individuo << endl;
+	cout << "PROMEDIO" << promedio_individuo << endl;
+	*/
+}
 vector<string> cruzamiento(vector<string> &pob) {
 	vector<string> nueva_generacion;
 	for (int i = 0; i < n_pob/2; i=i+2) {
@@ -73,6 +107,32 @@ vector<string> cruzamiento(vector<string> &pob) {
 		nueva_generacion.push_back(c1);
 		nueva_generacion.push_back(c2);
 	}
+	return nueva_generacion;
+}
+vector<string> cruzamiento2(vector<string> &pob) {
+	vector<string> nueva_generacion;
+	for (int i = 0; i < n_pob / 2; ++i) {
+		int r1 = rand() % pob.size();
+		int r2 = rand() % pob.size();
+		string a1 = pob[r1];
+		string a2 = pob[r2];
+		mutacion2(a1, a2);
+		nueva_generacion.push_back(a1);
+		nueva_generacion.push_back(a2);
+	}
+	l mejor_individuo = 0;
+	float promedio_individuo = 0;
+	for (int i = 0; i < nueva_generacion.size(); ++i) {
+		promedio_individuo += to_int(nueva_generacion[i]);
+		if (to_int(nueva_generacion[i]) > mejor_individuo) {
+			mejor_individuo = to_int(nueva_generacion[i]);
+		}
+	}
+	promedio_individuo /= n_pob;
+	cout << "Generacion " << n_gen << endl;
+	n_gen++;
+	cout << "MEJOR INDIVIDUO: " << mejor_individuo << endl;
+	cout << "PROMEDIO: " << promedio_individuo << endl;
 	return nueva_generacion;
 }
 void mutacion(string &individuo1, string &individuo2) {
@@ -93,6 +153,17 @@ void mutacion(string &individuo1, string &individuo2) {
 	individuo1[random_pos_mutation] = individuo2[random_pos_mutation];
 	individuo2[random_pos_mutation] = temp;
 }
+void mutacion2(string &individuo1, string &individuo2) {
+	string seed = "0001000000";
+	for (int i = 0; i < individuo1.length(); ++i) {
+		int r = rand() % seed.length();
+		if (seed[r] == '1') {
+			char temp = individuo1[i];
+			individuo1[i] = individuo2[i];
+			individuo2[i] = temp;
+		}
+	}
+}
 void algoritmo_genetico(){
 	srand(time(NULL));
 	vector<string> poblacion;
@@ -112,6 +183,9 @@ void algoritmo_genetico(){
 	//for (int i = 0; i < poblacion.size(); ++i) {
 	//	l ind = to_int(poblacion[i]);
 	//}
+	cout << "GENERACION 1" << endl;
+	cout << "MEJOR INDIVIDUO: " << mejor_individuo << endl;
+	cout << "PROMEDIO: " << promedio_individuo << endl;
 	
 	float media = 0;
 	for (int i = 0; i < n_iter; ++i) {
@@ -122,9 +196,9 @@ void algoritmo_genetico(){
 			media += temp;
 		}
 		media /= n_pob;
-		seleccion(poblacion, fun_aptitud, media);
-		cout << "MEJOR INDIVIDUO: " << mejor_individuo << endl;
-		cout << "PROMEDIO" << promedio_individuo << endl;
+		//seleccion(poblacion, fun_aptitud, media);
+		seleccion2(poblacion, fun_aptitud, media);
+		
 	}
 }
 int main(){
