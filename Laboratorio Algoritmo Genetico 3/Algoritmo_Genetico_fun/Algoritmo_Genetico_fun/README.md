@@ -33,8 +33,10 @@ Primero se define variables necesarias para la compilación del algoritmo genét
 
 Los resultados de una compilación del código mostrarán dentro de cada Generación el valor del Mejor Individuo(Número entero positivo dentro del rango especificado) y el promedio de los valores de todos los individuos.
 
-Luego de esto con todos estos datos se realizó una grafica comparativa de estos dentro de Excel, una previsualización del archivo: grafica.xlsx es el siguiente:
+![Alt text](https://github.com/patrick03524/Inteligencia-Artificial/blob/master/Laboratorio%20Algoritmo%20Genetico%203/Algoritmo_Genetico_fun/Algoritmo_Genetico_fun/img/compilacion.png)
 
+Luego de esto con todos estos datos se realizó una grafica comparativa de estos dentro de Excel, una previsualización del archivo: [grafica.xlsx] es el siguiente:
 
+![Alt text](https://github.com/patrick03524/Inteligencia-Artificial/blob/master/Laboratorio%20Algoritmo%20Genetico%203/Algoritmo_Genetico_fun/Algoritmo_Genetico_fun/img/captura.png)
 
 
