@@ -43,4 +43,5 @@ Ejercicio 4:
 ![Alt text](https://github.com/patrick03524/Inteligencia-Artificial/blob/master/Laboratorio%204%20CLIPS%20-%20Sistemas%20Expertos/resources/eje1-4.png)
 
 Ejercicio 5:
+
 ![Alt text](https://github.com/patrick03524/Inteligencia-Artificial/blob/master/Laboratorio%204%20CLIPS%20-%20Sistemas%20Expertos/resources/eje2-1.png)
