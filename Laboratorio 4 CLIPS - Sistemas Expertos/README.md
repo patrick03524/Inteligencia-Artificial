@@ -27,15 +27,19 @@ Todos los códigos se ejecutan con el programa CLIPS versión 6.3.
 Los resultados de una ejecución del código, y se mostrará, tanto el proceso para llegar al resultado pedido en el ejercicio como el resultado obtenido.
 
 Ejercicio 1:
+
 ![lonk](https://github.com/patrick03524/Inteligencia-Artificial/blob/master/Laboratorio%204%20CLIPS%20-%20Sistemas%20Expertos/resources/eje1-1.png)
 
 Ejercicio 2:
+
 ![Alt text](https://github.com/patrick03524/Inteligencia-Artificial/blob/master/Laboratorio%204%20CLIPS%20-%20Sistemas%20Expertos/resources/eje1-2.png)
 
 Ejercicio 3:
+
 ![Alt text](https://github.com/patrick03524/Inteligencia-Artificial/blob/master/Laboratorio%204%20CLIPS%20-%20Sistemas%20Expertos/resources/eje1-3.png)
 
 Ejercicio 4:
+
 ![Alt text](https://github.com/patrick03524/Inteligencia-Artificial/blob/master/Laboratorio%204%20CLIPS%20-%20Sistemas%20Expertos/resources/eje1-4.png)
 
 Ejercicio 5:
