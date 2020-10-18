@@ -1,0 +1,24 @@
+HECHOS
+(assert(lista a b c d e f g))
+
+REGLAS
+(defrule obtener-primero
+	(lista ?primera $?elementos)
+=>
+	(printout t "El primer elemento es: "?primera crlf))
+
+(defrule obtener-ultimo
+	(lista $?elementos ?ultimo)
+=>
+	(printout t "El ultimo elemento es: "?ultimo crlf))
+
+(defrule cambiar
+	?lis<-(lista ?primero $?elementos ?ultimo)
+=>
+	(retract ?lis)
+	(assert(lista-nueva ?ultimo $?elementos ?primero)))
+
+(defrule print-list
+	(lista-nueva $?elementos)
+=>
+	(printout t "Lista: " (str-implode ?elementos) crlf))

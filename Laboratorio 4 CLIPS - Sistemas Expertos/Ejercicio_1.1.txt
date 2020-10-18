@@ -1,0 +1,26 @@
+HECHOS
+(assert(contenido jarra 0))
+(assert(agregar 1))
+(assert(agregar 2))
+
+REGLAS
+(defrule agregar-1-litro
+	?one<-(contenido jarra ?Litros)
+	?hecho1<-(agregar 1)
+=>
+	(retract ?hecho1)
+	(retract ?one)
+	(assert(contenido jarra (+ ?Litros 1))))
+
+(defrule agregar-2-litro
+	?two<-(contenido jarra ?Litros)
+	?hecho2<-(agregar 2)
+=>
+	(retract ?hecho2)
+	(retract ?two)
+	(assert(contenido jarra (+ ?Litros 2))))
+
+(defrule 3-litros
+	(contenido jarra 3)
+=>
+	(printout t "Se lleno la jarra de 3 litros" crlf))

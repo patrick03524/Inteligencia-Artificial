@@ -1,0 +1,23 @@
+HECHOS
+(assert(rectangulo A 9 6)
+(rectangulo B 7 5)
+(rectangulo C 6 9)
+(rectangulo D 2 5)
+(suma 0))
+
+REGLAS
+(defrule sum-areas
+	(declare (salience 1))
+	?rect<-(rectangulo ? ?base ?altura)
+	?sum<-(suma ?suma)
+=>
+	(bind ?area (* ?base ?altura))
+	(bind ?suma (+ ?suma ?area))
+	(retract ?rect)
+	(retract ?sum)
+	(assert(suma ?suma)))
+
+(defrule suma
+	(suma ?suma)
+=>
+	(printout t "La suma es: "?suma crlf))

@@ -1,0 +1,16 @@
+HECHOS
+(assert(lista 5 7 3 1 8 4 2 6))
+
+REGLAS
+(defrule ordena-lista
+	?indice<-(lista $?ini ?num1 ?num2 $?fin)
+   	(test (< ?num1 ?num2))
+=>
+   	(assert (lista $?ini ?num2 ?num1 $?fin))
+   	(retract ?indice))
+
+(defrule print-lista-1
+   	(declare (salience -10))
+   	(lista $?values)
+=>
+   	(printout t "Lista: " (str-implode ?values) crlf))
