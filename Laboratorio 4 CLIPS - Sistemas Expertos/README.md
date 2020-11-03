@@ -13,7 +13,7 @@ Integrantes del grupo:
 * [Resultados](#resultados)
 
 ## Introducción
-Los códigos se desarrollaron en orden según el propuesto por los archivos conteniendo las instrucciones. En caso del primer ejercicio, lleva el nombre de [Ejercicio1-1.txt], dado que es el primer ejercicio del primer archivo de instrucciones. Siendo así también los consecuentes [Ejercicio1-2.txt], [Ejercicio1-3.txt] y [Ejercicio1-4.txt], pertenecen al primer archivo de instrucciones, pero [Ejercicio2-1.txt], pertenecen al siguiente archivo de instrucciones.
+Los códigos se desarrollaron en orden según el propuesto por los archivos conteniendo las instrucciones. En caso del primer ejercicio, lleva el nombre de [Ejercicio1-1.txt], dado que es el primer ejercicio del primer archivo de instrucciones. Siendo así también los consecuentes [Ejercicio1-2.txt], [Ejercicio1-3.txt] y [Ejercicio1-4.txt], pertenecen al primer archivo de instrucciones, pero [Ejercicio2-1.txt], pertenecen al siguiente archivo de instrucciones, como [Ejercicio3-1.txt] y [Ejercicio4-1.txt].
 
 Se realizaron los códigos para resolver los ejercicios propuestos en los archivos.
 
@@ -45,3 +45,11 @@ Ejercicio 4:
 Ejercicio 5:
 
 ![Alt text](https://github.com/patrick03524/Inteligencia-Artificial/blob/master/Laboratorio%204%20CLIPS%20-%20Sistemas%20Expertos/resources/eje2-1.png)
+
+Ejercicio 6:
+
+![Alt text](https://github.com/patrick03524/Inteligencia-Artificial/blob/master/Laboratorio%204%20CLIPS%20-%20Sistemas%20Expertos/resources/eje3-1.png)
+
+Ejercicio 7:
+
+![Fin](https://github.com/patrick03524/Inteligencia-Artificial/blob/master/Laboratorio%204%20CLIPS%20-%20Sistemas%20Expertos/resources/eje4-1.png)
